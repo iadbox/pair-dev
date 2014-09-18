@@ -1,6 +1,6 @@
 # ~/.tmuxinator/qustodian-backend.yml
 
-name: qustodian-backend
+name: backend
 root: ~/Code/backend
 
 # Optional tmux socket
