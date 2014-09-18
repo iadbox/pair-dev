@@ -17,4 +17,8 @@ Usage:
 1. `clone
 2. Create a common user in both machines involved
 3. Install vim plugins
-4. `tmuxinator start backend`
+4. ln -s ~/pair-dev/.zshrc ~/.zshrc
+5. ln -s ~/pair-dev/.vimrc ~/.vimrc
+6. ln -s ~/pair-dev/.tmux.conf ~/.tmux.conf
+7. Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh "oh my zsh home page")
+8. `tmuxinator start backend`

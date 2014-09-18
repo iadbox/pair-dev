@@ -67,26 +67,14 @@ fi
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 #
 #Pkgfile hook
-#Command not found suggestions
-source /usr/share/doc/pkgfile/command-not-found.zsh
   #Vim inner text object and surround plugin for terminal vim mode
-source ~/.oh-my-zsh/plugins/opp.zsh/opp.zsh
-source ~/.oh-my-zsh/plugins/opp.zsh/opp/*.zsh
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 ##Reverse incremental search
 bindkey '^R' history-incremental-search-backward
 #TERM setting when not running tmux or tmuxinator
 export TERM='xterm'
-eval `dircolors ~/.dir_colors`
-###powerline
-#. /usr/share/zsh/site-contrib/powerline.zsh
-#Tmux 256 color
-alias tmux="TERM=screen-256color-bce tmux"
-alias tmuxinator="TERM=screen-256color-bce tmuxinator"
 ####aliases
-source $HOME/.aliases_priv
 #####Rspec alias
 alias rspec="rspec --color"
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
