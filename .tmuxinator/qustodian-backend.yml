@@ -1,0 +1,33 @@
+# ~/.tmuxinator/qustodian-backend.yml
+
+name: qustodian-backend
+root: ~/Code/backend
+
+# Optional tmux socket
+#socket_name: qustodian-backend
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+tmux_command: wemux
+
+windows:
+  - vim:
+      layout: main-vertical
+      panes:
+        - vim
+  - zeus_testing:
+    #obtained from tmux list-windows
+      layout: 7a68,179x43,0,0{134x43,0,0[134x15,0,0,0,134x27,0,16,3],44x43,135,0[44x11,135,0,1,44x31,135,12,2]}
+      panes:
+        - sleep 5 && zeus s
+        - #empty
+        - zeus start
+        - sleep 5 && zeus c
