@@ -12,6 +12,8 @@ autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 set nowrap
 " move buffer to hidden without warning about pending changes
 set hidden
+"Leader mapping
+nmap , \
 
 """"""""""""""""""""""""""""""""""""mouse
 "allows mouse selection to go into visual mode and more
@@ -178,20 +180,6 @@ nmap <leader>tB :Tabularize /^[^{]*\zs{/<CR>
 nmap <leader>t( :Tabularize /^[^(]*\zs(/<CR>
 nmap <leader>tb :Tabularize /^[^(]*\zs(/<CR>
 
-" tabularize by selection in visual mode
-vmap ,t y:Tabularize /<C-R>"/<CR>
-" tabularize =
-nmap ,t= :Tabularize /^[^=]*\zs=/<CR>
-nmap ,te :Tabularize /^[^=]*\zs=/<CR>
-" tabularize =>
-nmap ,th :Tabularize /^[^=>]*\zs=>/<CR>
-" tabularize {
-nmap ,t{ :Tabularize /^[^{]*\zs{/<CR>
-nmap ,tB :Tabularize /^[^{]*\zs{/<CR>
-" tabularize (
-nmap ,t( :Tabularize /^[^(]*\zs(/<CR>
-nmap ,tb :Tabularize /^[^(]*\zs(/<CR>
-
 """"""""""""""""""""""""""""""""""""Unite
 "Set ag as default finder
 let g:unite_source_grep_command = 'ag'
@@ -216,26 +204,19 @@ function! s:unite_settings()
 endfunction
 "maps \e to open unite fuzzy finding
 nnoremap <Leader>e :Unite -silent -buffer-name=files -auto-resize -start-insert file_rec/async:!<CR>
-nnoremap ,e :Unite -silent -buffer-name=files -auto-resize -start-insert file_rec/async:!<CR>
 "maps \ag to open ag content fuzzy finding
 nnoremap <Leader>ag :Unite -silent -start-insert grep:.<CR>
-nnoremap ,ag :Unite -silent -start-insert grep:.<CR>
 "maps \r to open recent buffers open
 nnoremap <silent> <Leader>r :Unite -silent -buffer-name=recent -auto-resize file_mru<cr>
-nnoremap <silent> ,r :Unite -silent -buffer-name=recent -auto-resize file_mru<cr>
 "maps \b to navigate open buffers
 nnoremap <Leader>b :Unite -silent -buffer-name=buffers -auto-resize buffer<cr>
-nnoremap ,b :Unite -silent -buffer-name=buffers -auto-resize buffer<cr>
 "Search in command history without losing history filter
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 """"""""""""""""""""""""""""""""""""SplitJoin
 nmap <Leader>k :SplitjoinJoin<cr>
-nmap ,k :SplitjoinJoin<cr>
 nmap <Leader>j :SplitjoinSplit<cr>
-nmap ,j :SplitjoinSplit<cr>
 
 """"""""""""""""""""""""""""""""""""Rails
 "Open Alternate file in vertical split
 nmap <leader>a :AV<CR>
-nmap ,a :AV<CR>
