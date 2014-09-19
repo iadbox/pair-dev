@@ -14,11 +14,13 @@ Requirements:
 
 Usage:
 ------
-1. `clone
-2. Create a common user in both machines involved
-3. Install vim plugins
-4. ln -s ~/pair-dev/.zshrc ~/.zshrc
-5. ln -s ~/pair-dev/.vimrc ~/.vimrc
-6. ln -s ~/pair-dev/.tmux.conf ~/.tmux.conf
-7. Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh "oh my zsh home page")
-8. `tmuxinator start backend`
+1.  Create a common user in both machines involved
+2.  Setup ssh keys to your github account for the paired project
+3.  `git clone https://github.com/qustodian/pair-dev`
+4.  ln -s ~/pair-dev/.zshrc ~/.zshrc
+5.  ln -s ~/pair-dev/.vimrc ~/.vimrc
+6.  ln -s ~/pair-dev/.tmux.conf ~/.tmux.conf
+7.  Install vim plugins
+8.  Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh "oh my zsh home page")
+9.  Install tmuxinator : gem install tmuxinator
+10. `tmuxinator start backend`
