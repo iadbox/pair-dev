@@ -25,7 +25,7 @@ map Y y$
 "Open tag under cursor in new tab
 map <C-T> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 " Copy current file path to system clipboard
-nrmap <silent> cp :let @*=expand("%")<CR>
+nmap <silent> cp :let @*=expand("%")<CR>
 " Fast saving
 nmap ,w :w!<CR>
 
@@ -57,8 +57,6 @@ nnoremap <silent> - :vertical resize -5<CR>
 nnoremap <silent> <leader>+ :resize +5<CR>
 nnoremap <silent> <leader>- :resize -5<CR>
 
-""""""""""""""""""""""""""""""""""""Colors
-colorscheme jellybeans
 
 """"""""""""""""""""""""""""""""""""Tabs
 "Insert spaces instead of tabs it inserts (if defined) 'softtabstop' space chars
@@ -117,6 +115,8 @@ filetype plugin indent on
 "(runtime == source+relative path to vim installation dir)
 runtime macros/matchit.vim
 
+""""""""""""""""""""""""""""""""""""Colors
+colors jellybeans
 """"""""""""""""""""""""""""""""""""Syntastic
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_auto_loc_list = 2
@@ -231,8 +231,11 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 """"""""""""""""""""""""""""""""""""SplitJoin
 nmap <Leader>k :SplitjoinJoin<cr>
+nmap ,k :SplitjoinJoin<cr>
 nmap <Leader>j :SplitjoinSplit<cr>
+nmap ,j :SplitjoinSplit<cr>
 
 """"""""""""""""""""""""""""""""""""Rails
 "Open Alternate file in vertical split
 nmap <leader>a :AV<CR>
+nmap ,a :AV<CR>
