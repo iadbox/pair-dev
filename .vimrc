@@ -29,7 +29,7 @@ map <C-T> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 " Copy current file path to system clipboard
 nmap <silent> cp :let @*=expand("%")<CR>
 " Fast saving
-nmap ,w :w!<CR>
+nmap <leader>w :w!<CR>
 
 """"""""""""""""""""""""""""""""""""Search
 "ignore case when searching
